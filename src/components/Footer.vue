@@ -9,25 +9,26 @@ const toggleLocales = () => {
 </script>
 
 <template>
-  <nav text-xl mt-6>
-    <RouterLink class="icon-btn mx-2" to="/" :title="t('button.home')">
+  <a-space size="large" text-xl mt-10>
+    <RouterLink class="icon-btn" to="/" :title="t('button.home')">
       <div i-carbon-campsite />
     </RouterLink>
 
-    <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
-      <div i="carbon-sun dark:carbon-moon" />
-    </button>
+    <div class="icon-btn !outline-none cursor-pointer" :title="t('button.toggle_dark')" @click="toggleDark()">
+      <icon-moon-fill v-if="isDark.value" />
+      <icon-sun-fill v-else />
+    </div>
 
-    <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales()">
+    <a class="icon-btn cursor-pointer" :title="t('button.toggle_langs')" @click="toggleLocales()">
       <div i-carbon-language />
     </a>
 
-    <RouterLink class="icon-btn mx-2" to="/about" :title="t('button.about')">
+    <RouterLink class="icon-btn" to="/about" :title="t('button.about')">
       <div i-carbon-dicom-overlay />
     </RouterLink>
 
-    <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank" title="GitHub">
+    <a class="icon-btn" rel="noreferrer" href="https://github.com/hehehai/arco-vue3" target="_blank" title="GitHub">
       <div i-carbon-logo-github />
     </a>
-  </nav>
+  </a-space>
 </template>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import logo from '~/assets/arco.svg'
+
 const user = useUserStore()
 const name = $ref(user.savedName)
 
@@ -13,45 +15,36 @@ const { t } = useI18n()
 
 <template>
   <div>
-    <div text-4xl>
-      <div i-carbon-campsite inline-block />
+    <div text-4xl mb-3>
+      <a-image :width="100" :preview="false" :src="logo" />
     </div>
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        Vitesse
-      </a>
-    </p>
-    <p>
+    <a-typography-paragraph>
+      <a-link rel="noreferrer" href="https://arco.design/vue" target="_blank">
+        Arco Vue
+      </a-link>
+    </a-typography-paragraph>
+    <a-typography-text opacity-75>
       <em text-sm opacity-75>{{ t('intro.desc') }}</em>
-    </p>
+    </a-typography-text>
 
-    <div py-4 />
-
-    <input
-      id="input"
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      :aria-label="t('intro.whats-your-name')"
-      type="text"
-      autocomplete="false"
-      p="x4 y2"
-      w="250px"
-      text="center"
-      bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
-      outline="none active:none"
-      @keydown.enter="go"
-    >
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
-
-    <div>
-      <button
-        btn m-3 text-sm
-        :disabled="!name"
-        @click="go"
-      >
-        {{ t('button.go') }}
-      </button>
+    <div mt-8>
+      <a-input
+        id="input"
+        v-model="name"
+        :placeholder="t('intro.whats-your-name')"
+        :aria-label="t('intro.whats-your-name')"
+        :style="{ width: '250px' }"
+        @keydown.enter="go"
+      />
+      <div mt-3>
+        <a-button
+          type="primary"
+          :disabled="!name"
+          @click="go"
+        >
+          {{ t('button.go') }}
+        </a-button>
+      </div>
     </div>
   </div>
 </template>

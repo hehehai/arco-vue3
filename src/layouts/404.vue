@@ -9,10 +9,10 @@ const { t } = useI18n()
       <div i-carbon-warning inline-block />
     </div>
     <RouterView />
-    <div>
-      <button btn text-sm m="3 t8" @click="router.back()">
+    <div mt-8>
+      <a-button @click="router.back()">
         {{ t('button.back') }}
-      </button>
+      </a-button>
     </div>
   </main>
 </template>

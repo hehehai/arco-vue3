@@ -8,14 +8,21 @@ title: About
   <h3>About</h3>
 </div>
 
-[Vitesse](https://github.com/antfu/vitesse) is an opinionated [Vite](https://github.com/vitejs/vite) starter template made by [@antfu](https://github.com/antfu) for mocking apps swiftly. With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **UnoCSS** for styling and icons.
+[Arco Vue3](https://github.com/hehehai/arco-vue3) is an opinionated [Vite](https://github.com/vitejs/vite) starter template made by [@hehehai](https://github.com/hehehai) for mocking apps swiftly. With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **UnoCSS** for styling and icons.
 
 ```js
 // syntax highlighting example
-function vitesse() {
+function arcoVue() {
   const foo = 'bar'
   console.log(foo)
 }
 ```
 
-Check out the [GitHub repo](https://github.com/antfu/vitesse) for more details.
+Check out the [GitHub repo](https://github.com/hehehai/arco-vue3) for more details.
+
+#### thx
+
+- [arco design](https://arco.design)
+- [@arco-design/web-vue](https://github.com/arco-design/arco-design-vue)
+- [@antfu](https://github.com/antfu)
+- [vitesse](https://github.com/antfu/vitesse)

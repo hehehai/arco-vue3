@@ -11,16 +11,16 @@ watchEffect(() => {
 
 <template>
   <div>
-    <div text-4xl>
+    <div text-4xl mb-3>
       <div i-carbon-pedestrian inline-block />
     </div>
-    <p>
+    <a-typography-paragraph>
       {{ t('intro.hi', { name: props.name }) }}
-    </p>
+    </a-typography-paragraph>
 
-    <p text-sm opacity-75>
+    <a-typography-text opacity-75>
       <em>{{ t('intro.dynamic-route') }}</em>
-    </p>
+    </a-typography-text>
 
     <template v-if="user.otherNames.length">
       <p text-sm mt-4>
@@ -35,13 +35,13 @@ watchEffect(() => {
       </p>
     </template>
 
-    <div>
-      <button
-        btn m="3 t6" text-sm
+    <div mt-3>
+      <a-button
+        type="primary"
         @click="router.back()"
       >
         {{ t('button.back') }}
-      </button>
+      </a-button>
     </div>
   </div>
 </template>

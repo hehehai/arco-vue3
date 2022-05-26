@@ -3,13 +3,9 @@
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'Vitesse',
+  title: 'Arco Vue3',
   meta: [
-    { name: 'description', content: 'Opinionated Vite Starter Template' },
-    {
-      name: 'theme-color',
-      content: computed(() => isDark.value ? '#00aba9' : '#ffffff'),
-    },
+    { name: 'description', content: 'Opinionated Arco Vue Starter Template' },
   ],
   link: [
     {
@@ -18,6 +14,13 @@ useHead({
       href: computed(() => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg'),
     },
   ],
+})
+
+watchEffect(() => {
+  if (isDark.value)
+    document.documentElement.classList.add('dark')
+  else
+    document.documentElement.classList.remove('dark')
 })
 </script>
 
