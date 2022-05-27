@@ -13,6 +13,8 @@
 <a href="https://stackblitz.com/github/hehehai/arco-vue3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
 </p>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d408cb69-afa2-4e73-b35a-a9f43261c56d/deploy-status)](https://app.netlify.com/sites/arco-vue3/deploys)
+
 ## 特性
 
 - ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - 就是快！
