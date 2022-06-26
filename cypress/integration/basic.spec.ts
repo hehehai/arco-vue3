@@ -18,14 +18,14 @@ context('Basic', () => {
     cy.contains('[Default Layout]')
       .should('exist')
 
-    cy.get('[btn]')
+    cy.get('button.arco-btn')
       .click()
       .url()
       .should('eq', 'http://localhost:3333/')
   })
 
   it('markdown', () => {
-    cy.get('[title="About"]')
+    cy.get('[title="关于"]')
       .click()
       .url()
       .should('eq', 'http://localhost:3333/about')

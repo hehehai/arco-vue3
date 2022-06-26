@@ -1,3 +1,9 @@
 // Vitest Snapshot v1
 
-exports[`Counter.vue > should render 1`] = `"<div>10 <button class=\\"inc\\"> + </button><button class=\\"dec\\"> - </button></div>"`;
+exports[`Counter.vue > should render 1`] = `
+"<div>10 <button class=\\"arco-btn arco-btn-secondary arco-btn-shape-square arco-btn-size-medium arco-btn-status-normal inc\\" type=\\"button\\">
+    <!--v-if--> +
+  </button><button class=\\"arco-btn arco-btn-secondary arco-btn-shape-square arco-btn-size-medium arco-btn-status-normal dec\\" type=\\"button\\">
+    <!--v-if--> -
+  </button></div>"
+`;
