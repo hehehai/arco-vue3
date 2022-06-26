@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import NProgress from 'nprogress'
 import { setupLayouts } from 'virtual:generated-layouts'
 import generatedRoutes from '~pages'
-import { UserModule } from '~/types'
+import type { UserModule } from '~/types'
 
 const routes = setupLayouts(generatedRoutes)
 
